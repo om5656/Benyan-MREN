@@ -1,5 +1,12 @@
+import { Outlet } from "react-router-dom";
 function Users() {
-  return <h1>Users Page</h1>;
+ return(
+ 
+ <section className="py-4">
+  <Outlet/>
+ </section>
+ );
+
 }
 
 export default Users;

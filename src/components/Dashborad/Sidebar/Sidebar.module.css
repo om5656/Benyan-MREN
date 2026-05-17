@@ -19,3 +19,11 @@
 .linkTitle {
   font-size: 1.2rem;
 }
+
+.badge {
+  background-color: var(--second-color);
+  color: var(--whit-color);
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 8px;
+}

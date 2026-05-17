@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Sidebar.module.css";
-function Sidebar() {
+function Sidebar({ hasUserDraft }) {
   const links = [
     { icon: "fa-chart-line", title: "Status", path: "/" },
     { icon: "fa-users", title: "Users Management", path: "/users" },
     { icon: "fa-building", title: "Projects Management", path: "/projects" },
-    { icon: "fa-building", title: "Developers Management" },
-    { icon: "fa-globe", title: "CMS" },
-    { icon: "fa-message", title: "Live Chat" },
+    { icon: "fa-building", title: "Developers Management", path: "/developers" },
+    { icon: "fa-globe", title: "CMS", path: "/" },
+    { icon: "fa-message", title: "Live Chat", path: "/" },
   ];
 
   return (
@@ -26,6 +26,9 @@ function Sidebar() {
           >
             <i className={`fa-solid ${item.icon} ${styles.icon}`}></i>
             <span className={styles.linkTitle}>{item.title}</span>
+            {item.title === "Users Management" && hasUserDraft && (
+              <span className={styles.badge}>Draft</span>
+            )}
           </NavLink>
         ))}
       </nav>
