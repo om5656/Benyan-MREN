@@ -5,9 +5,9 @@ function Sidebar({ hasUserDraft }) {
     { icon: "fa-chart-line", title: "Status", path: "/" },
     { icon: "fa-users", title: "Users Management", path: "/users" },
     { icon: "fa-building", title: "Projects Management", path: "/projects" },
-    { icon: "fa-building", title: "Developers Management" },
-    { icon: "fa-globe", title: "CMS" },
-    { icon: "fa-message", title: "Live Chat" },
+    { icon: "fa-building", title: "Developers Management", path: "/developers" },
+    { icon: "fa-globe", title: "CMS", path: "/" },
+    { icon: "fa-message", title: "Live Chat", path: "/" },
   ];
 
   return (
